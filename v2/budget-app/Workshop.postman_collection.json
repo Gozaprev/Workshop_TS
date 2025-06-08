@@ -1,0 +1,606 @@
+{
+	"info": {
+		"_postman_id": "6a3d711f-a9a6-4759-bbce-7447bad05303",
+		"name": "Workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42904584"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post budget",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NDc5OSwiZXhwIjoxNzQ5MzU1Njk5fQ.t1OUnlMl8UBNpcHkSxc2_-CLR8MFvn57Htd1TlJz0Vs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Monthly Expenses\",\r\n  \"amount\": 2000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/budgets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"budgets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "budget",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NzE5NCwiZXhwIjoxNzQ5MzU4MDk0fQ.CvTDfan1qobOscS-IX7YnsIEl6iAwZDqQpTTNK0vzR0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/budgets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"budgets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "budget:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NjIyMiwiZXhwIjoxNzQ5MzU3MTIyfQ.L0bsc4fehnNajkgam4ZHh8TcbWygK7r1qAMgaq0396s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/budgets/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"budgets",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "budget",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NjIyMiwiZXhwIjoxNzQ5MzU3MTIyfQ.L0bsc4fehnNajkgam4ZHh8TcbWygK7r1qAMgaq0396s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updated Budget 3\",\r\n  \"totalAmount\": 600,\r\n  \"fromDate\": \"2025-06-01\",\r\n  \"toDate\": \"2025-06-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/budgets/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"budgets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "budget",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NjIyMiwiZXhwIjoxNzQ5MzU3MTIyfQ.L0bsc4fehnNajkgam4ZHh8TcbWygK7r1qAMgaq0396s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/budgets/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"budgets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NjIyMiwiZXhwIjoxNzQ5MzU3MTIyfQ.L0bsc4fehnNajkgam4ZHh8TcbWygK7r1qAMgaq0396s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Salary June\",\r\n  \"description\": \"Monthly salary payment\",\r\n  \"amount\": 5000,\r\n  \"type\": \"income\",\r\n  \"date\": \"2025-06-01\",\r\n  \"budgetId\": 2\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NzE5NCwiZXhwIjoxNzQ5MzU4MDk0fQ.CvTDfan1qobOscS-IX7YnsIEl6iAwZDqQpTTNK0vzR0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NzE5NCwiZXhwIjoxNzQ5MzU4MDk0fQ.CvTDfan1qobOscS-IX7YnsIEl6iAwZDqQpTTNK0vzR0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/transactions/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NzE5NCwiZXhwIjoxNzQ5MzU4MDk0fQ.CvTDfan1qobOscS-IX7YnsIEl6iAwZDqQpTTNK0vzR0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n  \"amount\": 135.00,\r\n  \"description\": \"Updated\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/transactions/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1NzE5NCwiZXhwIjoxNzQ5MzU4MDk0fQ.CvTDfan1qobOscS-IX7YnsIEl6iAwZDqQpTTNK0vzR0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/transactions/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "budgets/:id/transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1ODE1NiwiZXhwIjoxNzQ5MzU5MDU2fQ.JbL4sBGIv8uHh75XEOvjaHs-gu-i2XzccjBQooZoGGk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/budgets/2/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"budgets",
+						"2",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test2@example.com\",\r\n  \"password\": \"password123\",\r\n  \"firstName\": \"Jane\",\r\n  \"lastName\": \"Doa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password123\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions/analytics/summary",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1OTgxMywiZXhwIjoxNzQ5MzYzNDEzfQ.U6E2ymHJX0rttXMiuooMM_1moH2hZDtxzVxV-WhlGtM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/transactions/analytics/summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions",
+						"analytics",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase-loyal-card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1OTgxMywiZXhwIjoxNzQ5MzYzNDEzfQ.U6E2ymHJX0rttXMiuooMM_1moH2hZDtxzVxV-WhlGtM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"paymentMethod\": \"credit_card\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/purchase-loyal-card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"purchase-loyal-card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth/refresh",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1OTAxNSwiZXhwIjoxNzQ5MzU5OTE1fQ.C6osVSMwh6ca8_CGUxIZng40emBjWFGd_9b4tJJ_2Y4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions/analytics/trends",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1OTgxMywiZXhwIjoxNzQ5MzYzNDEzfQ.U6E2ymHJX0rttXMiuooMM_1moH2hZDtxzVxV-WhlGtM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/transactions/analytics/trends",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions",
+						"analytics",
+						"trends"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions/analytics/categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1OTgxMywiZXhwIjoxNzQ5MzYzNDEzfQ.U6E2ymHJX0rttXMiuooMM_1moH2hZDtxzVxV-WhlGtM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/transactions/analytics/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions",
+						"analytics",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions/export/csv",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1OTgxMywiZXhwIjoxNzQ5MzYzNDEzfQ.U6E2ymHJX0rttXMiuooMM_1moH2hZDtxzVxV-WhlGtM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/transactions/export/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transactions",
+						"export",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "budgets/export/pdf",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsImlhdCI6MTc0OTM1OTgxMywiZXhwIjoxNzQ5MzYzNDEzfQ.U6E2ymHJX0rttXMiuooMM_1moH2hZDtxzVxV-WhlGtM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/budgets/export/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"budgets",
+						"export",
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
